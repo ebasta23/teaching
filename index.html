@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teaching Portfolio – ME 3414 Fluid Dynamics – Ehab Basta</title>
+    <style>
+        body {
+            max-width: 900px;
+            font-family: "Times New Roman", Times, serif;
+            margin: 40px auto;
+            padding: 0 16px;
+            overflow-x: hidden;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #800080;
+            text-align: center;
+        }
+        .bullet {
+            margin: 0 10px;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        p {
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.5;
+            margin-left: 20px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+        p:hover {
+            background-color: #f9f9f9; /* Light background on hover */
+            border-radius: 4px;
+        }
+        p.philosophy:hover {
+            background-color: #C7F6C7; /* Light green background on hover for philosophy paragraph */
+        }
+	p.goals:hover {
+            background-color: #FFCCCB; /* Light red background on hover for philosophy paragraph */
+        }
+        .subheading {
+            font-size: 16px;
+            color: #000000;
+            margin-top: 15px;
+            margin-left: 40px;
+        }
+        .goals {
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.5;
+            margin-left: 60px;
+            margin-top: 15px;
+        }
+        ul {
+            font-size: 16px;
+            color: #000000;
+            margin-left: 60px;
+            margin-top: 10px;
+            list-style-type: disc;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .philosophy-list {
+            font-size: 16px;
+            color: #000000;
+            margin-left: 100px;
+            margin-top: 10px;
+            list-style-type: none;
+        }
+        .philosophy-list li::before {
+            content: "♦";
+            margin-right: 10px;
+        }
+        .philosophy-list li {
+            margin-bottom: 10px;
+        }
+        .reference-list {
+            font-size: 16px;
+            color: #000000;
+            margin-left: 100px;
+            margin-top: 10px;
+            list-style-type: none;
+        }
+        .reference-list li::before {
+            content: "♦";
+            margin-right: 10px;
+        }
+        .reference-list li {
+            margin-bottom: 10px;
+        }
+        .red-number {
+            color: #FF0000;
+        }
+        .green-example {
+            color: #008000;
+        }
+        .blue-link {
+            color: #0000FF;
+        }
+        .red-feedback {
+            color: #FF0000;
+        }
+        .double-indent {
+            margin-left: 60px;
+        }
+        .color-list {
+            font-size: 16px;
+            color: #000000;
+            margin-left: 60px;
+            margin-top: 10px;
+            list-style-type: disc;
+        }
+        .color-list li {
+            margin-bottom: 10px;
+        }
+        .green-color { color: #008000; }
+        .blue-color { color: #0000FF; }
+        .pink-color { color: #FF00FF; }
+        .black-color { color: #000000; }
+        .red-color { color: #FF0000; }
+
+        .hover-link {
+            position: relative;
+            cursor: pointer;
+            text-decoration: underline;
+            z-index: 1001;
+        }
+        .hover-link:hover .preview {
+            display: block;
+        }
+        .preview {
+            display: none;
+            position: absolute;
+            bottom: -100px;
+            z-index: 1000;
+            border: 1px solid #ccc;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+            transform: translateX(0);
+            will-change: display;
+        }
+        .preview img {
+            width: 300px;
+            max-width: 400px;
+            height: auto;
+            object-fit: contain;
+            image-rendering: auto;
+        }
+        .preview-ex1 { left: 100px; }
+        .preview-final { left: 150px; }
+        .preview-thirteen { bottom: -100px; right: -400px; }
+    </style>
+</head>
+<body>
+
+    <div class="title">
+        Teaching Portfolio <span class="bullet">•</span> ME 3414 Fluid Dynamics <span class="bullet">•</span> Spring 2025 <span class="bullet">•</span> Instructor: Ehab Basta
+    </div>
+
+    <p style="text-align:center;margin-left:0;font-style:italic;">Ph.D. Candidate, Department of Mechanical Engineering, Virginia Tech. End-of-semester teaching reflection prepared for the course coordinator. Links open lecture notes, summaries, homework, and exam samples.</p>
+
+    <h2>1. Philosophy of teaching</h2>
+    <p class="philosophy">
+        My teaching philosophy is best described as <strong>instructor-guided exploration</strong>: I lead students through the derivation and development of core concepts from first principles during lectures, provide illustrative examples, and then give them space to explore and apply these ideas independently through homework and self-study. The goal was to not simply present formulas, but to build intuition in real time - creating a strong foundation for students to deepen their understanding during independent work.
+    </p>
+    <div class="subheading">- [Goals] My main goal was to help students</div>
+    <p class="goals">
+        <span class="red-number">1)</span> <strong>develop strong communication skills</strong>, <span class="red-number">2)</span> <strong>throughout the course gradually develop the analytical thinking needed to understand the Navier-Stokes equations</strong>, — the cornerstone of fluid mechanics — rather than memorizing equations, and <span class="red-number">3)</span> <strong>build confidence with mathematical concepts</strong>. I also aimed to help them cultivate <span class="red-number">4)</span> <strong>critical thinking and engineering problem-solving skills</strong> — knowing how to approach a challenging question and break it down into manageable steps.
+    </p>
+    <p>
+        The remaining three goals — mathematical confidence, analytical development, and engineering mindset — are further discussed in the next sections.
+    </p>
+
+    <h2>2. Lectures and learning materials</h2>
+    <p class="philosophy">
+        - [<em>General Structure</em>] All my notes — including diagrams — were <strong><em>hand-written</em></strong> from scratch in class. This encouraged students to follow along and write the concepts gradually, rather than passively reading pre-written slides ahead of me.
+    </p>
+    <p class="philosophy">
+        - [<em>General Structure</em>] My philosophy in delivering lectures was always to begin with a <strong><em>clear rationale</em></strong> for why we are studying a particular concept.
+    </p>
+    <ul>
+        <li><span class="green-example">Example</span>: Dimensional Analysis <a href="https://drive.google.com/file/d/1_PPRmpdcgDBbQ7WTy1ywxSIPWkJIj5Sy/view#page=1" class="blue-link" target="_blank">[1. Link: L25, 1-2]</a></li>
+    </ul>
+    <p class="philosophy">
+        - [<em>General Structure</em>] I also tried to present the course content as an <strong><em>ongoing story</em></strong>, where each new concept naturally builds on the previous ones. This helped students connect abstract quantities to real physical experiences.
+    </p>
+    <ul>
+        <li><span class="green-example">Example</span>: Viscosity and Differential Form for fluid flow <a href="https://drive.google.com/file/d/1m0_nbkaiE938Oq66S8SiymWqvkcPJ6ct/view#page=1" class="blue-link" target="_blank">[2. Link: L33, 1]</a></li>
+    </ul>
+    <p class="philosophy">
+        - [<em>General Structure</em>] Once the rationale and motivation were established, we would slowly <strong><em>derive the governing equations</em></strong> step-by-step from first principles. Finally, I always paused to reflect on the final form—both mathematically and physically. This served the purpose for achieving the second goal, <strong><span class="red-number">2)</span></strong> throughout the course gradually develop the analytical thinking needed to understand the Navier–Stokes equations, — the cornerstone of fluid mechanics — rather than memorizing equations
+    </p>
+    <ul>
+        <li><span class="green-example">Examples</span>: Nozzle <a href="https://drive.google.com/file/d/1eAIJ2yN8klB88bfDJD-gVOt3mc2SJhv7/view#page=1" class="blue-link" target="_blank">[3. Link: L19, 1-3]</a> and Navier Stokes <a href="https://drive.google.com/file/d/19ABOMZUOc-HbfTuj5KauPAt4fUqzsXmn/view#page=1" class="blue-link" target="_blank">[4. Link: L39, 2]</a></li>
+    </ul>
+    <p class="philosophy">
+        - [<em>Philosophy</em>] Most concepts were introduced through a <strong><em>full derivation, followed by one or two illustrative examples</em></strong>—sometimes more, depending on the complexity. <span class="red-feedback">[I received feedback from some students requesting more examples]</span>. While I understand the appeal of examples for building confidence, I believe strongly that derivations are essential. We are not training technicians; we are training engineers who must understand where equations come from and why they work. Focusing on more examples will be at the expense of derivations and risks reducing learning to pattern recognition rather than conceptual understanding.
+    </p>
+    <ul class="philosophy-list">
+        <li>Of course, I incorporated examples throughout the course. For each new concept, I typically included one or two examples to reinforce understanding. I deliberately chose examples that were different from those presented in the official textbook, so students could engage with a broader range of examples.</li>
+    </ul>
+    <p class="philosophy">
+        - [<em>General Structure</em>] Since each lecture involved different aspects—such as derivations, mathematical tools used within those derivations, transitions between ideas, and applied insights—I developed a <strong><em>color-coded note system</em></strong> to help students distinguish between them clearly <a href="https://drive.google.com/file/d/1_0Jxa1xtay9n9I0_WsRMjoa7qYHcy2EH/view#page=5" class="blue-link" target="_blank">[5. Link: L5, 5-6]</a>:
+    </p>
+    <ul class="color-list">
+        <li><span class="green-color">Green</span> for derivations</li>
+        <li><span class="blue-color">Blue</span> for mathematical steps or concepts used within derivations</li>
+        <li><span class="pink-color">Pink</span> for transitions, rationale, and applications</li>
+        <li><span class="black-color">Black</span> for final equations, enclosed in a red box</li>
+        <li><span class="red-color">Red</span> for important remarks.</li>
+    </ul>
+    <p class="philosophy">
+        - [<em>General Structure</em>] I noticed that mathematics was not the students’ strongest suit—often not because of the concepts themselves, but due to the intimidating jargon that typically surrounds them. So, I made a conscious effort not to overwhelm them with technical language. Instead, I focused on <strong><em>conveying what each mathematical concept means</em></strong> in the context of our course. This served the purpose for achieving the third goal, <strong><span class="red-number">3)</span></strong> build confidence with mathematical concepts.
+    </p>
+    <ul>
+        <li><span class="green-example">Example</span>: Taylor Series <a href="https://drive.google.com/file/d/1ztwRHy5RTqkjCMC3JjiN33VmCC76udDg/view#page=4" class="blue-link" target="_blank">[6. Link: L4, 4-8]</a></li>
+    </ul>
+    <p class="philosophy">
+        - [<em>General Structure</em>] Overall, my approach to complex concepts is to <strong><em>break it down and boil it down to concepts</em></strong> they know just to show them that we get intimidated if we don’t breakdown the concept.
+    </p>
+    <ul>
+        <li><span class="green-example">Example</span>: CFD to Navier Stokes to conservation of mass and momentum; and Conservation of energy <a href="https://drive.google.com/file/d/1WWxaI5eKzF5mxEhQ9ynjaXHSbHI9GDGr/view#page=2" class="blue-link" target="_blank">[7. Link: L24, 2]</a></li>
+    </ul>
+    <p class="philosophy">
+        - [<em>Pre-Class</em>] Before each lecture, I consulted <strong><em>multiple references</em></strong> to explore different perspectives on the same topic. My goal was to combine the most effective elements from each source in a way that best aligned with both the course objectives and my teaching philosophy.
+    </p>
+    <ul>
+        <li>Dr. Boreyko notes as a backbone to guide my pace and effective hand-written notes.</li>
+        <li>Dr. Biddle on YouTube for real life context and applications.</li>
+        <li>Books</li>
+        <ul class="reference-list">
+            <li>Munson et. al (Official Course Textbook for well-rounded expectation)</li>
+            <li>Frank White (Math intensive reference)</li>
+            <li>Cengel and Cimbala (Focused on applications, my undergrad text)</li>
+            <li>Fox and McDonald (Rich with solved examples)</li>
+        </ul>
+    </ul>
+    <p class="philosophy">
+        - [<em>Pre-Class</em>] I always began each class with a recap of the previous lecture, often presented as a brief PowerPoint presentation. This typically took 5–10 minutes and served to highlight the key takeaways while giving me an opportunity to revisit concepts that may not have been clear the first time. Occasionally, especially when reviewing more mathematical topics—such as the total derivative— the recap could extend up to 20 minutes to ensure students had a solid grasp before moving forward.
+    </p>
+    <p class="philosophy">
+        - [<em>Presentation</em>] A key advantage of using the projector setup was the ability to easily integrate illustrations, diagrams, videos, and even code demonstrations into the lecture. This helped me better visualize abstract concepts and keep the students engaged with a variety of content formats.
+    </p>
+    <ul>
+        <li><span class="green-example">Example</span>: Pitot tube on aircrafts, Streaklines, CFD simulations, Pathlines on Matlab</li>
+    </ul>
+    <p class="philosophy">
+        - [<em>Presentation/Progress</em>] I projected my notes in real time using a full-screen PDF annotator. This allowed me to write and draw directly during the lecture, keeping the delivery interactive and structured. I also used an external keyboard to seamlessly switch between windows, especially when I needed to pull up graphics or visual illustrations to support the concepts being discussed.
+    </p>
+    <p class="philosophy">
+        - [<em>Presentation</em>] Thoughts: The <strong><em>whiteboard is a classic and effective teaching tool</em></strong>—great for pacing and encouraging active engagement—it also has its limitations. It restricts the ability to easily incorporate visual aids, multimedia, or pre-prepared content, which can be essential for illustrating complex ideas more clearly.
+    </p>
+    <p class="philosophy">
+        - [<em>Post class</em>] After class, I <strong><em>revisit the lecture notes and annotate them</em></strong> further before uploading. These annotations often include transition remarks or clarifying steps that I mentioned verbally during the lecture but didn’t have the chance to write down in real time. This helps reinforce the flow of ideas and supports students who rely on the notes for review.
+    </p>
+    <p class="philosophy">
+        - [<em>Post-class</em>] After the lectures were posted, the same <strong><em>lecture notes are rewritten</em></strong> by someone with clearer handwriting to improve readability. <a href="https://drive.google.com/file/d/1GskjiXd3K2gqR9Z6y4Q7ttvh3_bidTwV/view?usp=sharing" class="blue-link" target="_blank">[Old]</a>, <a href="https://drive.google.com/file/d/1YxkcPUjT_eQKMn20lxOTT9_F9WsL5os2/view?usp=sharing" class="blue-link" target="_blank">[New]</a>
+    </p>
+    <p class="philosophy">
+        - [<em>Post-class</em>] At the end of each chapter, I <strong><em>added a summary</em></strong> that I believe was particularly helpful to the students. It took considerable time to craft each one, as I aimed to make them both concise and powerful—capturing the essence of the material while reinforcing key takeaways. <a href="https://drive.google.com/file/d/1BW4BIY2DAbOIuDna43TcMcFfLa-amV6E/view" class="blue-link" target="_blank">[9 Link:S4]</a>
+    </p>
+    <h2>3. Homework</h2>
+    <p class="philosophy">
+        - [<em>Structure & Philosophy</em>]. After every few major concepts in a chapter, I prepared a weekly homework assignment consisting of <strong><em>10 hand-picked problems</em></strong>, typically ranging from medium to challenging in difficulty. This helped in the third and fourth goals. <strong><span class="red-number">3)</span></strong> <strong><em>build confidence with mathematical concepts</em></strong>. and cultivate <strong><span class="red-number">4)</span></strong> <strong><em>critical thinking and engineering problem-solving skills</em></strong>.
+    </p>
+    <ul>
+        <li>Students have <em>full access</em> to their notes and resources—homework is the time to test and solidify the concepts learned in class. One key advantage of assigning difficult problems is that it pushes students to engage deeply with the material.</li>
+        <li>It also gives me the flexibility to build a <em>rich pool of potential exam questions</em>, ensuring both variety and alignment with what was taught.</li>
+    </ul>
+    <p class="philosophy">
+        - [<em>Philosophy</em>] In the following homework, I usually begin with 2–3 questions revisiting the previous major concept to incorporate <strong><em>spaced retrieval</em></strong>—a technique I adopted from Engineering Education research to reinforce long-term retention.
+    </p>
+    <p class="philosophy">
+        - [Preparation] I typically go through nearly <strong><em>all the end-of-chapter problems</em></strong> and additional references to carefully select 10 questions for the weekly homework. This process is time-consuming, but it ensures every assignment is deliberately designed.
+    </p>
+    <p class="philosophy">
+        - [<em>Grading</em>] I <strong><em>graded problems in the homework myself</em></strong> to receive real-time feedback on student performance and identify any common pitfalls. This also helped me become familiar with each student, allowing me to build a stronger connection with the class. Additionally, I <strong><em>typed up the homework solutions</em></strong> to provide annotated explanations and highlight frequent mistakes.
+    </p>
+    <ul>
+        <li><span class="green-example">Example</span>: <a href="https://drive.google.com/file/d/1YIDYyIX6ycPW-rw9aFiLo71UXwZ5jokq/view" class="blue-link" target="_blank">[10. Link: H5, Q1]</a></li>
+    </ul>
+    <p class="philosophy">
+        - [<em>Feedback</em>] <span class="red-feedback">Some students asked me to include the final answer with the homework problems</span>, but I deliberately chose not to. I want them to <strong><em>contemplate and assess whether their final answer</em></strong> makes sense on their own. In real life, we rarely have final answers provided—we must rely on our understanding and reasoning. Also, if a student gets stuck, that lingering uncertainty often engages the subconscious, which can lead to deeper insights later. As mentioned earlier, I still provide detailed, step-by-step solutions after the submission.
+    </p>
+    <h2>4. Exams</h2>
+    <p class="philosophy">
+        - [<em>Philosophy</em>] Exams are not the time for students to encounter an intimidating new concept. My goal is to assess their true understanding of the material covered in class and reinforced through homework. For that reason, I carefully <strong><em>link the exam problems to the homework</em></strong>—sometimes directly, other times through subtle variations—to ensure fairness while still testing depth of understanding. <a href="https://drive.google.com/file/d/1oR7-3dQAiRXiCBhbd8MYqeLowI81ssvo/view" class="blue-link" target="_blank">[HW2, 8]</a> – <a href="https://drive.google.com/file/d/1BAQe6kuCNhfKOrXj59NcnVbgPBvwOwvM/view" class="blue-link" target="_blank">[EX1, 8]</a>
+    </p>
+    <p class="philosophy">
+        - [<em>Structure</em>] The <strong><em>exam consists of a mix</em></strong> of 20% conceptual multiple-choice questions—often more challenging to test depth of understanding—and 80% full-length problems that reflect the structure and rigor of the homework.
+    </p>
+    <p class="philosophy">
+        - [<em>Preparation</em>] I asked <strong><em>Dr. Boreyko to review the exam</em></strong> before administering it, as I wanted a second opinion on the estimated time required and whether any questions could be phrased more clearly. This was especially important given my limited experience in gauging exam length and clarity.
+    </p>
+    <p class="philosophy">
+        - [<em>Preparation</em>] For the full problems, I <strong><em>referred to the reference textbooks</em></strong>, Dr. Boreyko’s past exams, and the Purdue repository. As for the conceptual questions, I occasionally created my own, aiming to make them interesting and thought-provoking.
+    </p>
+    <h2>5. Assessment</h2>
+    <p class="philosophy">
+        Assessment is an area I’m still <strong><em>actively working to improve</em></strong>. I aimed to carry the spirit of fairness into the exams, striving to be generous while maintaining consistency across the board.
+    </p>
+    <p class="philosophy">
+        - I truly care about students’ understanding of the core concepts. Therefore, if a student makes a numerical mistake early on, I <strong><em>carry that error</em></strong> through in their grading but do not penalize them further for subsequent steps if their later reasoning and application of concepts are correct.
+    </p>
+    <p class="philosophy">
+        - I designed <strong><em>two grading schemes</em></strong> and gave students the benefit of the better outcome:
+    </p>
+    <ul>
+        <li>Midterm 1 (22.5%) + Midterm 2 (22.5%) + Final Exam (30%)</li>
+        <li>max{Midterm 1, Midterm 2} (30%) + Final Exam (45%)</li>
+    </ul>
+    <p class="philosophy">
+        - Exam performance was <strong><em>usually bimodal</em></strong>. [<span class="blue-link">12, Histogram: <span class="hover-link"><span class="blue-link">Ex1</span><span class="preview preview-ex1"><img src="https://i.imgur.com/FOyIZb0.png" alt="Ex1 Histogram Preview"></span></span>, <span class="hover-link"><span class="blue-link">Final</span><span class="preview preview-final"><img src="https://i.imgur.com/37NHQRa.png" alt="Final Histogram Preview"></span></span></span>]
+    </p>
+    <p class="philosophy">
+        - I did not curve individual exams but <strong><em>applied a final curve</em></strong> to everyone’s overall grade. Additionally, if a student’s score was within 1% of the next letter grade, I rounded their grade up.
+    </p>
+    <h2>6. Support</h2>
+    <p class="philosophy">
+        - [<em>Non-technical</em>] I worked closely with <strong><em>Dr. Huxtable</em></strong> to provide non-technical support to students.
+    </p>
+    <p class="philosophy">
+        - [<em>Office hours</em>] I held <strong><em>two hours of weekly office hours</em></strong>, typically scheduled two days before assignment submissions, allowing students enough time to reflect on our discussions.
+    </p>
+    <p class="philosophy">
+        - [<em>Philosophy</em>] My approach was <strong><em>not to provide direct answers</em></strong> but to encourage critical thinking by engaging students in a ‘<em>debate</em>,’ asking questions that prompted them to evaluate the validity of their own approaches. This helped in cultivating <span class="red-number">4)</span> <strong><em>engineering problem-solving skills and promote critical thinking</em></strong>.
+    </p>
+    <p class="philosophy">
+        - [<em>Office hours</em>] I made an effort to <strong><em>respond promptly</em></strong> to emails and was available for students outside of official office hours. I used office hours as an opportunity for <strong><em>group discussions</em></strong>, where some students stayed to listen to their peers’ questions. I encouraged all questions, no matter how simple or tedious they might seem—there are no dumb questions. Our goal was to learn, recognize our weaknesses, and support each other.
+    </p>
+    <p class="philosophy">
+        - [<strong><em>Response to questions on spot</em></strong>] Sometimes students ask excellent questions. If I know the answer, I share it with them right away. If not, I pause to think together with them, and we often arrive at an answer through discussion. Occasionally, I acknowledge it’s a great question, tell them I’ll research it further, and come back with the response in the next lecture.
+    </p>
+    <p class="philosophy">
+        - Students who <strong><em>regularly attended lectures and office hours</em></strong> tended to perform better, and their questions also challenged me to keep learning alongside them. <ul><li><span class="green-example">Example</span>: A student-initiated code question <a href="https://drive.google.com/file/d/1NyUD-WM_N0sPvaI2CT2KPPyYrpRm0rLA/view?usp=sharing" class="blue-link" target="_blank">[13. Link: MC]</a></li></ul>
+    </p>
+    <h2>7. What I learned</h2>
+    <p class="philosophy">
+        - My skills in preparing lectures, designing homework and exams, and managing unexpected or challenging questions have all <strong><em>improved progressively</em></strong> over time.
+    </p>
+    <p class="philosophy">
+        - I <strong><em>deepened my own understanding</em></strong> of fluid mechanics—teaching proved to be the best way to learn. I paid close attention to the details throughout. <ul><li><span class="green-example">Example</span>: <a href="https://drive.google.com/file/d/1BLtPA2be26j44_hnuyVoD-eGMBExO0TD/view?usp=sharing" class="blue-link" target="_blank">[14. Link: L 36, 1]</a></li></ul>
+    </p>
+    <p class="philosophy">
+        - Preparing for a course demands <strong><em>substantial time and effort</em></strong>, from designing content and assessments to organizing materials and ensuring alignment with learning goals. It is a critical foundation for effective teaching.
+    </p>
+    <h2>8. What I will do</h2>
+    <p class="philosophy">
+        - [Engagement] A major challenge I faced was finding effective ways to <strong><em>engage students</em></strong> more actively throughout the course.
+    </p>
+    <p class="philosophy">
+        - I plan to provide <strong><em>concise mathematical recap documents</em></strong> to help students quickly review and reinforce the key mathematical tools used throughout the course.
+    </p>
+    <p class="philosophy">
+        - I now have the full course developed. I can review the entire material over a few days and refine the structure, including <strong><em>implementing a more precise and consistent color-coding</em></strong> scheme—much like a first edition of a textbook being revised for clarity and coherence.
+    </p>
+    <p class="philosophy">
+        - Some lectures are math-heavy, and I often find myself <strong><em>scrolling up and down</em></strong> during the session. For these lectures, I plan to combine the projector with the whiteboard so key derivations stay visible.
+    </p>
+    <p class="philosophy">
+        - Homework and summaries will <strong><em>be more consistent moving forward</em></strong>. My last three assignments were not well aligned with my office hours due to the heavy time commitment required for preparing homework, lecture notes, chapter summaries, and the exam.
+    </p>
+    <p class="philosophy">
+        - For <strong><em>future iterations</em></strong>, the notes, preparations, summaries, and recap materials will serve as a solid foundation. My goal is to create a <strong><em>comprehensive platform</em></strong> that supports students with varying needs. This will include hand-written notes, detailed PDF summaries, and recap PowerPoint presentations, all designed to complement the textbook and provide students with varying levels of detail for a more personalized learning experience.
+    </p>
+    <p class="philosophy">
+        - I plan to further <strong><em>refine my course objectives</em></strong> through self-reflection and discussions with professionals in the industry.
+    </p>
+</body>
+</html>
